@@ -9,10 +9,33 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBAction func unicorn(sender: AnyObject) {
+        
+        textDisplay.text = "🦄🦄🦄🦄🦄"
+        print ("Pressed Unicorn! button")
+    }
+    
+    @IBAction func goodbyeWorld(sender: AnyObject) {
+       
+        textDisplay.text = "Goodbye, World!"
+        print ("Pressed Goodbye World button.")
+    }
+    
+    @IBAction func helloWorld(sender: AnyObject) {
+        
+        textDisplay.text = "Hello, World!"
+        textDisplay.textColor = UIColor.redColor()
+        print("Pressed Hello World button.")
+    }
+    
+    @IBOutlet weak var textDisplay: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        textDisplay.text = "Zzz..."
     }
 
     override func didReceiveMemoryWarning() {
